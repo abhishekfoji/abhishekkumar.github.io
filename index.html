@@ -37,7 +37,7 @@
   <h2 class="text-center text-capatalize text-primary pt-5">Login</h2>
   <hr class="w-25 mx-auto pb-5">
   <div class="w-50 mx-auto">
-  <form action="" method="post" class="was-validated">
+  <form action="frnds.html" method="post" class="was-validated">
     <div class="form-group">
       <label><i class="fa fa-user"></i>Username:</label>
       <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" autocomplete="off" required>
@@ -58,7 +58,7 @@
       </label>
     </div>
     <div class="form-actions">
-    <button type="submit" onclick="route()" class="btn btn-primary">Login</button>
+    <button type="submit" onclick="return route()" class="btn btn-primary">Login</button>
   </div>
   </form>
 </div>
@@ -70,9 +70,13 @@
     var u = document.getElementById("uname").value;
     var p = document.getElementById("pwd").value;
     if (u==p) {
-      window.location="/frnds.html";
-    }else{
-      alert("The Username and Password didn`t match");
+      return true;
+
+  }else{
+
+    alert("The Username and Password didn`t match");
+    return false;
+      
     }
    }
  </script>
